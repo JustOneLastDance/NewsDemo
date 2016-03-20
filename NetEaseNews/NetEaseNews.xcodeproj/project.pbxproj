@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF3F253F59DA7B4089B69090 /* libPods-NetEaseNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C141E0C51AD6CC802069C7 /* libPods-NetEaseNews.a */; };
 		E44424731C9E512A00452676 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E44424721C9E512A00452676 /* main.m */; };
 		E44424761C9E512A00452676 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E44424751C9E512A00452676 /* AppDelegate.m */; };
 		E44424791C9E512A00452676 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44424781C9E512A00452676 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38C141E0C51AD6CC802069C7 /* libPods-NetEaseNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetEaseNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A5AFFE628DA948AE6BC4AF /* Pods-NetEaseNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetEaseNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetEaseNews/Pods-NetEaseNews.release.xcconfig"; sourceTree = "<group>"; };
+		9E09F8F261D98F163FD3E05F /* Pods-NetEaseNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetEaseNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetEaseNews/Pods-NetEaseNews.debug.xcconfig"; sourceTree = "<group>"; };
 		E444246E1C9E512900452676 /* NetEaseNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetEaseNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44424721C9E512A00452676 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E44424741C9E512A00452676 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF3F253F59DA7B4089B69090 /* libPods-NetEaseNews.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F13784A314F898EC25DC7C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38C141E0C51AD6CC802069C7 /* libPods-NetEaseNews.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB5F48A583AB62D655EF7899 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E09F8F261D98F163FD3E05F /* Pods-NetEaseNews.debug.xcconfig */,
+				45A5AFFE628DA948AE6BC4AF /* Pods-NetEaseNews.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E44424651C9E512900452676 = {
 			isa = PBXGroup;
 			children = (
 				E44424701C9E512A00452676 /* NetEaseNews */,
 				E444246F1C9E512900452676 /* Products */,
+				AB5F48A583AB62D655EF7899 /* Pods */,
+				9F13784A314F898EC25DC7C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E44424851C9E512A00452676 /* Build configuration list for PBXNativeTarget "NetEaseNews" */;
 			buildPhases = (
+				67B6340D3B854EEAB58B70B6 /* Check Pods Manifest.lock */,
 				E444246A1C9E512900452676 /* Sources */,
 				E444246B1C9E512900452676 /* Frameworks */,
 				E444246C1C9E512900452676 /* Resources */,
+				4BE9F3BA93D839C0E1DF3BFE /* Embed Pods Frameworks */,
+				6EBF0A0A73908BDCFA1A0720 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BE9F3BA93D839C0E1DF3BFE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetEaseNews/Pods-NetEaseNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67B6340D3B854EEAB58B70B6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6EBF0A0A73908BDCFA1A0720 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetEaseNews/Pods-NetEaseNews-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E444246A1C9E512900452676 /* Sources */ = {
@@ -260,6 +335,7 @@
 		};
 		E44424861C9E512A00452676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E09F8F261D98F163FD3E05F /* Pods-NetEaseNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NetEaseNews/Info.plist;
@@ -271,6 +347,7 @@
 		};
 		E44424871C9E512A00452676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45A5AFFE628DA948AE6BC4AF /* Pods-NetEaseNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NetEaseNews/Info.plist;
@@ -299,6 +376,7 @@
 				E44424871C9E512A00452676 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
