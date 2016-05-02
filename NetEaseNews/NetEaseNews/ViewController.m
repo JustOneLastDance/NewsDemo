@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "News.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [News loadNewsListWithURLString:@"T1348647853363/0-20.html" finished:^(NSArray *newsList) {
+//        NSLog(@"%@", newsList);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

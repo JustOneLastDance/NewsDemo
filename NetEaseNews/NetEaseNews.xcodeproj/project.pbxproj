@@ -14,6 +14,9 @@
 		E444247C1C9E512A00452676 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E444247A1C9E512A00452676 /* Main.storyboard */; };
 		E444247E1C9E512A00452676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E444247D1C9E512A00452676 /* Assets.xcassets */; };
 		E44424811C9E512A00452676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E444247F1C9E512A00452676 /* LaunchScreen.storyboard */; };
+		E4DB80D51CD7501C00D1F9CE /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DB80D41CD7501C00D1F9CE /* News.m */; };
+		E4DB80E41CD76C6800D1F9CE /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DB80E11CD76C6800D1F9CE /* NSArray+Log.m */; };
+		E4DB80E51CD76C6800D1F9CE /* NetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DB80E31CD76C6800D1F9CE /* NetWorkTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,12 @@
 		E444247D1C9E512A00452676 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E44424801C9E512A00452676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E44424821C9E512A00452676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4DB80D31CD7501C00D1F9CE /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		E4DB80D41CD7501C00D1F9CE /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		E4DB80E01CD76C6800D1F9CE /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		E4DB80E11CD76C6800D1F9CE /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		E4DB80E21CD76C6800D1F9CE /* NetWorkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkTools.h; sourceTree = "<group>"; };
+		E4DB80E31CD76C6800D1F9CE /* NetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +91,9 @@
 		E44424701C9E512A00452676 /* NetEaseNews */ = {
 			isa = PBXGroup;
 			children = (
+				E4F4847B1CD747C700387FC0 /* Model */,
 				E44424741C9E512A00452676 /* AppDelegate.h */,
+				E4DB80DE1CD76C6800D1F9CE /* Tools */,
 				E44424751C9E512A00452676 /* AppDelegate.m */,
 				E44424771C9E512A00452676 /* ViewController.h */,
 				E44424781C9E512A00452676 /* ViewController.m */,
@@ -101,6 +112,34 @@
 				E44424721C9E512A00452676 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4DB80DE1CD76C6800D1F9CE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				E4DB80DF1CD76C6800D1F9CE /* Log */,
+				E4DB80E21CD76C6800D1F9CE /* NetWorkTools.h */,
+				E4DB80E31CD76C6800D1F9CE /* NetWorkTools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		E4DB80DF1CD76C6800D1F9CE /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				E4DB80E01CD76C6800D1F9CE /* NSArray+Log.h */,
+				E4DB80E11CD76C6800D1F9CE /* NSArray+Log.m */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		E4F4847B1CD747C700387FC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4DB80D31CD7501C00D1F9CE /* News.h */,
+				E4DB80D41CD7501C00D1F9CE /* News.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DB80E41CD76C6800D1F9CE /* NSArray+Log.m in Sources */,
+				E4DB80D51CD7501C00D1F9CE /* News.m in Sources */,
+				E4DB80E51CD76C6800D1F9CE /* NetWorkTools.m in Sources */,
 				E44424791C9E512A00452676 /* ViewController.m in Sources */,
 				E44424761C9E512A00452676 /* AppDelegate.m in Sources */,
 				E44424731C9E512A00452676 /* main.m in Sources */,
